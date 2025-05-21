@@ -10,7 +10,6 @@ const localizer = momentLocalizer(moment);
 
 const BigCalendar = () => {
   const [view, setView] = useState<View>(Views.WORK_WEEK);
-  const [date, setDate] = useState<Date>(new Date(2025, 4, 12)); // Default to May 12, 2025 where events exist
 
   const handleOnChangeView = (selectedView: View) => {
     setView(selectedView);
@@ -24,8 +23,6 @@ const BigCalendar = () => {
       endAccessor="end"
       views={["work_week", "day"]}
       view={view}
-      date={date} // Set the initial date
-      onNavigate={(newDate) => setDate(newDate)} // Update date on navigation
       style={{ height: "98%" }}
       onView={handleOnChangeView}
       min={new Date(2025, 1, 0, 8, 0, 0)}

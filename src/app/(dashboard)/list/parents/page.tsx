@@ -20,8 +20,8 @@ const columns = [
     accessor: "info",
   },
   {
-    header: "Parent Names",
-    accessor: "parents",
+    header: "Student Names",
+    accessor: "students",
     className: "hidden md:table-cell",
   },
   {

@@ -49,14 +49,14 @@ const ExamListPage = () => {
       <td className="hidden md:table-cell">{item.teacher}</td>
       <td className="hidden md:table-cell">{item.date}</td>
       <td>
-      <div className="flex items-center gap-2">
-  {(role === "admin" || role === "teacher") && (
-    <>
-      <FormModal table="result" type="update" data={item} />
-      <FormModal table="result" type="delete" id={item.id} />
-    </>
-  )}
-</div>
+        <div className="flex items-center gap-2">
+          {role === "admin" || role === "teacher" && (
+            <>
+              <FormModal table="exam" type="update" data={item} />
+              <FormModal table="exam" type="delete" id={item.id} />
+            </>
+          )}
+        </div>
       </td>
     </tr>
   );
